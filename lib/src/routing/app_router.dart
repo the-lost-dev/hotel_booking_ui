@@ -13,7 +13,7 @@ final router = GoRouter(
       routes: [
         GoRoute(
           path: 'home',
-          name: AppRoutes.landing.name,
+          name: AppRoutes.home.name,
           builder: (context, state) => const HomeScreen(),
         ),
       ],

@@ -17,7 +17,7 @@ class LandingScreen extends StatelessWidget {
           SizedBox(
             height: SizeConfig.blockSizeVertical * AppSizes.sixty,
             child: SvgPicture.asset(
-              AppImages.bg,
+              'assets/bg1.svg',
               fit: BoxFit.cover,
             ),
           ),

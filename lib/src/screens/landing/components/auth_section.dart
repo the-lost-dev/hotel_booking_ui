@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hotel_booking_ui/src/common/common_exports.dart';
 import 'package:hotel_booking_ui/src/constants/constants_exports.dart';
+import 'package:hotel_booking_ui/src/routing/app_router.dart';
+import 'package:hotel_booking_ui/src/utils/utils_exports.dart';
 
 import 'already_have_account_widget.dart';
 
@@ -13,19 +16,16 @@ class AuthSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: AppSizes.twenty,
-          vertical: AppSizes.twenty,
-        ),
+        padding: const EdgeInsets.all(AppSizes.twenty),
         child: Column(
           children: [
-            const SizedBox(height: AppSizes.forty),
+            gapH2,
             Text(
               AppStrings.landingTitle,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.displayLarge,
             ),
-            const SizedBox(height: AppSizes.twenty),
+            gapH2,
             Text(
               AppStrings.landingSubtitle,
               textAlign: TextAlign.center,
@@ -34,9 +34,8 @@ class AuthSection extends StatelessWidget {
             const Spacer(),
             PrimaryButton(
               btnTitle: AppStrings.register,
-              onPressed: () => null, // TODO: IMPLEMENT NAVIGATION
+              onPressed: () => context.pushNamed(AppRoutes.home.name),
             ),
-            const SizedBox(height: AppSizes.ten),
             const AlreadyHaveAccountWidget(),
           ],
         ),

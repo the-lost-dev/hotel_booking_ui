@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hotel_booking_ui/src/constants/constants_exports.dart';
+import 'package:hotel_booking_ui/src/routing/app_router.dart';
 
 class AlreadyHaveAccountWidget extends StatelessWidget {
   const AlreadyHaveAccountWidget({
@@ -18,7 +20,7 @@ class AlreadyHaveAccountWidget extends StatelessWidget {
               ),
         ),
         TextButton(
-          onPressed: () => null, //TODO: IMPLEMENT NAVIGATION
+          onPressed: () => context.pushNamed(AppRoutes.home.name),
           child: Text(
             AppStrings.login,
             style: Theme.of(context).textTheme.labelLarge!.copyWith(

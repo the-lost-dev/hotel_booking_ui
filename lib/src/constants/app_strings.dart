@@ -1,6 +1,7 @@
 class AppStrings {
   static const String register = 'Register';
   static const String login = 'Log In';
+  static const String currentLocation = 'Current Location';
   static const String haveAccount = 'Already have an account?';
   static const String landingTitle =
       'Discover and Find Your Perfect Healing Place';

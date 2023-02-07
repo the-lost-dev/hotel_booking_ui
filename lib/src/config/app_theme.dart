@@ -31,7 +31,7 @@ class AppTheme {
     ),
     bodySmall: GoogleFonts.raleway(
       fontSize: AppSizes.eighteen,
-      color: AppColors.grey,
+      color: AppColors.grey500,
     ),
     labelLarge: GoogleFonts.raleway(
       fontWeight: FontWeight.w700,

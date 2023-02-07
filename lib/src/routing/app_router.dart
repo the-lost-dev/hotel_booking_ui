@@ -6,17 +6,18 @@ enum AppRoutes { landing, home }
 final router = GoRouter(
   initialLocation: '/',
   routes: [
+    // GoRoute(
+    //   path: '/',
+    //   name: AppRoutes.landing.name,
+    //   builder: (context, state) => const LandingScreen(),
+    //   routes: [
+
+    //   ],
+    // ),
     GoRoute(
       path: '/',
-      name: AppRoutes.landing.name,
-      builder: (context, state) => const LandingScreen(),
-      routes: [
-        GoRoute(
-          path: 'home',
-          name: AppRoutes.home.name,
-          builder: (context, state) => const HomeScreen(),
-        ),
-      ],
+      name: AppRoutes.home.name,
+      builder: (context, state) => const HomeScreen(),
     ),
   ],
 );

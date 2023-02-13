@@ -1,6 +1,10 @@
 class AppStrings {
   static const String register = 'Register';
   static const String login = 'Log In';
+  static const String searchHere = 'Search here...';
+  static const String featuredListings = 'Featured Listings';
+  static const String viewAll = 'View All';
+  static const String houseNearYou = 'House Near You';
   static const String currentLocation = 'Current Location';
   static const String haveAccount = 'Already have an account?';
   static const String landingTitle =

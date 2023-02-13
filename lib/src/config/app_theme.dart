@@ -13,12 +13,13 @@ class AppTheme {
       color: AppColors.black,
     ),
     displayMedium: GoogleFonts.raleway(
-      fontSize: AppSizes.thirtyFour,
+      fontSize: AppSizes.twenty,
       fontWeight: FontWeight.w700,
       color: AppColors.black,
     ),
     displaySmall: GoogleFonts.raleway(
-      fontSize: AppSizes.twenty,
+      fontSize: AppSizes.eighteen,
+      fontWeight: FontWeight.w600,
       color: AppColors.black,
     ),
     bodyLarge: GoogleFonts.raleway(
@@ -38,6 +39,10 @@ class AppTheme {
       fontSize: AppSizes.eighteen,
       wordSpacing: .05,
     ),
+    labelMedium: GoogleFonts.raleway(
+      fontSize: AppSizes.eighteen,
+      color: AppColors.brown,
+    ),
   );
 
   static ThemeData lightTheme() {
@@ -45,6 +50,12 @@ class AppTheme {
       textTheme: _appLightTextTheme,
       scaffoldBackgroundColor: AppColors.white,
       appBarTheme: const AppBarTheme(elevation: AppSizes.zero),
+      textSelectionTheme: const TextSelectionThemeData(
+        cursorColor: AppColors.black,
+      ),
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(foregroundColor: AppColors.white),
+      ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.black,

@@ -8,6 +8,7 @@ import 'size_config.dart';
 /// Constant gap widths
 final gapW2 = SizedBox(width: SizeConfig.blockSizeHorizontal * AppSizes.two);
 final gapW4 = SizedBox(width: SizeConfig.blockSizeHorizontal * AppSizes.four);
+final gapW6 = SizedBox(width: SizeConfig.blockSizeHorizontal * AppSizes.six);
 final gapW8 = SizedBox(width: SizeConfig.blockSizeHorizontal * AppSizes.eight);
 final gapW12 = SizedBox(
   width: SizeConfig.blockSizeHorizontal * AppSizes.twelve,

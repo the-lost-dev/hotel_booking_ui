@@ -1,0 +1,56 @@
+import 'house.dart';
+
+const List<House> resorts = [
+  House(
+    name: 'The Lost Resort',
+    location: 'Bitung, Sulawesi Utara',
+    ownerName: 'Selwyn',
+    imagePath: 'assets/images/1.jpg',
+    measurement: 1805,
+    pricePerNight: 3000,
+    numOfBedrooms: 4,
+    numOfBathrooms: 3,
+  ),
+  House(
+    name: 'Bitung Resort',
+    location: 'Bitung, Sulawesi Utara',
+    ownerName: 'Selwyn',
+    imagePath: 'assets/images/2.jpg',
+    measurement: 905,
+    pricePerNight: 5000,
+    numOfBedrooms: 2,
+    numOfBathrooms: 2,
+  ),
+  House(
+    name: 'Lembeh Resort',
+    location: 'Bitung, Sulawesi Utara',
+    ownerName: 'The Lost Dev',
+    imagePath: 'assets/images/3.jpg',
+    measurement: 905,
+    pricePerNight: 1000,
+    numOfBedrooms: 1,
+    numOfBathrooms: 1,
+  ),
+ 
+  House(
+    name: 'The Paradise Hotel',
+    location: 'Bitung, Sulawesi Utara',
+    ownerName: 'Palmwine Papi',
+    imagePath: 'assets/images/5.jpg',
+    measurement: 1805,
+    pricePerNight: 50000,
+    numOfBedrooms: 4,
+    numOfBathrooms: 3,
+  ),
+   House(
+    name: 'The Fountain Hotel',
+    location: 'Bitung, Sulawesi Utara',
+    ownerName: 'Selwyn',
+    imagePath: 'assets/images/4.jpg',
+    measurement: 20000,
+    pricePerNight: 150000,
+    numOfBedrooms: 20,
+    numOfBathrooms: 15,
+    discountPrice: 100000,
+  ),
+];

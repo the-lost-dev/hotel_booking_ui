@@ -25,4 +25,5 @@ class AppSizes {
   static const double fortyEight = 48;
 
   static const double sixty = 60;
+   static const double sixtyFour = 64;
 }

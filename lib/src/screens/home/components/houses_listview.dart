@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:hotel_booking_ui/src/constants/constants_exports.dart';
-import 'package:hotel_booking_ui/src/screens/home/components/house_widget.dart';
 import 'package:hotel_booking_ui/src/utils/utils_exports.dart';
 
 import '../models/fake_data.dart';
-import 'animated_listview_widget.dart';
+import 'home_components.dart';
 
 class HousesListview extends StatelessWidget {
   const HousesListview({
@@ -17,7 +16,7 @@ class HousesListview extends StatelessWidget {
     final indexes = [0, 1, 2];
     final data = [for (var i in indexes) resorts[i]];
     return SizedBox(
-      height: SizeConfig.blockSizeVertical * AppSizes.forty,
+      height: SizeConfig.blockSizeVertical * AppSizes.thirtySix,
       child: ListView.separated(
         primary: false,
         shrinkWrap: true,

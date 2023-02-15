@@ -1,7 +1,13 @@
 class AppStrings {
   static const String register = 'Register';
+  static const String heroTag = 'Resort';
   static const String login = 'Log In';
   static const String searchHere = 'Search here...';
+  static const String home = 'Home';
+  static const String orders = 'Orders';
+  static const String save = 'Save';
+  static const String chatHost = 'Chat Host';
+  static const String profile = 'Profile';
   static const String featuredListings = 'Featured Listings';
   static const String viewAll = 'View All';
   static const String houseNearYou = 'House Near You';

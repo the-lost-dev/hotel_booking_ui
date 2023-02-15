@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hotel_booking_ui/src/constants/constants_exports.dart';
@@ -27,7 +26,7 @@ class LocationNotificationsRow extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-             SvgPicture.asset(
+                SvgPicture.asset(
                   AppIcons.locationIcon,
                   colorFilter: const ColorFilter.mode(
                     AppColors.brown,
@@ -53,13 +52,14 @@ class LocationNotificationsRow extends StatelessWidget {
           ),
           child: Stack(
             children: [
-              const Icon(
-                Icons.notifications_none_outlined,
-                size: AppSizes.thirty,
+              SvgPicture.asset(
+                AppIcons.notificationIcon,
+                width: AppSizes.thirtyTwo,
+                height: AppSizes.thirtyTwo,
               ),
               Positioned(
-                right: AppSizes.six,
-                top: AppSizes.four,
+                right: AppSizes.four,
+                top: AppSizes.two,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(AppSizes.thirty),
                   child: const ColoredBox(

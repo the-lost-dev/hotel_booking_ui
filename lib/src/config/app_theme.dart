@@ -43,6 +43,11 @@ class AppTheme {
       fontSize: AppSizes.eighteen,
       color: AppColors.brown,
     ),
+    labelSmall: GoogleFonts.raleway(
+      fontSize: AppSizes.fourteen,
+      fontWeight: FontWeight.w600,
+      color: AppColors.black,
+    ),
   );
 
   static ThemeData lightTheme() {

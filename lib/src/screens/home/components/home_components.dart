@@ -1,6 +1,5 @@
 export 'body.dart';
 export 'custom_nav_bar.dart';
-export 'animated_listview_widget.dart';
 export 'featured_listing_widget.dart';
 export 'house_widget.dart';
 export 'houses_listview.dart';

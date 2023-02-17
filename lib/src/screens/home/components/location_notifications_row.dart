@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hotel_booking_ui/src/common/common_exports.dart';
 import 'package:hotel_booking_ui/src/constants/constants_exports.dart';
 import 'package:hotel_booking_ui/src/utils/utils_exports.dart';
 
@@ -44,12 +45,7 @@ class LocationNotificationsRow extends StatelessWidget {
             ),
           ],
         ),
-        Container(
-          padding: const EdgeInsets.all(AppSizes.ten),
-          decoration: BoxDecoration(
-            color: AppColors.white,
-            borderRadius: BorderRadius.circular(AppSizes.sixty),
-          ),
+        ColoredContainer(
           child: Stack(
             children: [
               SvgPicture.asset(

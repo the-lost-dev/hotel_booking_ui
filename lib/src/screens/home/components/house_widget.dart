@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
+
+import 'package:hotel_booking_ui/src/common/common_exports.dart';
 import 'package:hotel_booking_ui/src/constants/constants_exports.dart';
+import 'package:hotel_booking_ui/src/routing/app_router.dart';
 import 'package:hotel_booking_ui/src/utils/utils_exports.dart';
 
 import '../models/house.dart';
@@ -9,16 +12,21 @@ class HouseWidget extends StatelessWidget {
   const HouseWidget({
     Key? key,
     required this.house,
+    required this.index,
   }) : super(key: key);
 
   final House house;
+  final String index;
 
   @override
   Widget build(BuildContext context) {
-    return Hero(
-      tag: AppStrings.heroTag,
-      child: InkWell(
-        // onTap: () => null, //TODO: IMPLEMENT
+    return InkWell(
+      onTap: () => context.pushNamed(
+        AppRoutes.details.name,
+        params: {'houseIndex': index},
+      ),
+      child: Hero(
+        tag: house.name,
         child: Container(
           padding: const EdgeInsets.all(AppSizes.ten),
           width: SizeConfig.blockSizeHorizontal * AppSizes.sixty,
@@ -86,40 +94,18 @@ class HouseWidget extends StatelessWidget {
                       ),
                     ),
                     gapH2,
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        SvgPicture.asset(
-                          AppIcons.locationIcon,
-                          colorFilter: const ColorFilter.mode(
-                            AppColors.grey500,
-                            BlendMode.srcIn,
-                          ),
-                        ),
-                        gapW2,
-                        Expanded(
-                          child: Text(
-                            house.location,
-                            style: Theme.of(context).textTheme.displaySmall,
-                          ),
-                        ),
-                      ],
+                    IconTextWidget(
+                      isSVG: true,
+                      svgIcon: AppIcons.locationIcon,
+                      iconColor: AppColors.grey500,
+                      title: house.location,
                     ),
                     const SizedBox(height: AppSizes.six),
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        const Icon(
-                          Icons.layers_rounded,
-                          color: AppColors.grey500,
-                        ),
-                        gapW2,
-                        Text(
-                          '${house.measurement} Sqft',
-                          style: Theme.of(context).textTheme.displaySmall,
-                        ),
-                      ],
-                    ),
+                    IconTextWidget(
+                      icon: Icons.layers_rounded,
+                      iconColor: AppColors.grey500,
+                      title: '${house.measurement} ${AppStrings.sqft}',
+                    )
                   ],
                 ),
               ),

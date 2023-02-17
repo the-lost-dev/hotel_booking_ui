@@ -27,7 +27,7 @@ class AppTheme {
       color: AppColors.black,
     ),
     bodyMedium: GoogleFonts.raleway(
-      fontSize: AppSizes.thirtyFour,
+      fontSize: AppSizes.twenty,
       color: AppColors.black,
     ),
     bodySmall: GoogleFonts.raleway(
@@ -53,7 +53,7 @@ class AppTheme {
   static ThemeData lightTheme() {
     return ThemeData.light().copyWith(
       textTheme: _appLightTextTheme,
-      scaffoldBackgroundColor: AppColors.white,
+      scaffoldBackgroundColor: AppColors.scaffoldBgColor,
       appBarTheme: const AppBarTheme(elevation: AppSizes.zero),
       textSelectionTheme: const TextSelectionThemeData(
         cursorColor: AppColors.black,

@@ -4,6 +4,7 @@ class House {
     required this.location,
     required this.ownerName,
     required this.imagePath,
+    required this.description,
     required this.measurement,
     required this.pricePerNight,
     required this.numOfBedrooms,
@@ -15,6 +16,7 @@ class House {
   final String location;
   final String ownerName;
   final String imagePath;
+  final String description;
   final int measurement;
   final int pricePerNight;
   final int numOfBedrooms;
@@ -26,6 +28,7 @@ class House {
     String? location,
     String? ownerName,
     String? imagePath,
+    String? description,
     int? measurement,
     int? pricePerNight,
     int? numOfBedrooms,
@@ -37,6 +40,7 @@ class House {
       location: location ?? this.location,
       ownerName: ownerName ?? this.ownerName,
       imagePath: imagePath ?? this.imagePath,
+      description: description ?? this.description,
       measurement: measurement ?? this.measurement,
       pricePerNight: pricePerNight ?? this.pricePerNight,
       numOfBedrooms: numOfBedrooms ?? this.numOfBedrooms,
@@ -51,6 +55,7 @@ class House {
       'location': location,
       'ownerName': ownerName,
       'imagePath': imagePath,
+      'description': description,
       'measurement': measurement,
       'pricePerNight': pricePerNight,
       'numOfBedrooms': numOfBedrooms,
@@ -65,6 +70,7 @@ class House {
       location: map['location'] as String,
       ownerName: map['ownerName'] as String,
       imagePath: map['imagePath'] as String,
+      description: map['description'] as String,
       measurement: map['measurement'] as int,
       pricePerNight: map['pricePerNight'] as int,
       numOfBedrooms: map['numOfBedrooms'] as int,
@@ -75,7 +81,7 @@ class House {
 
   @override
   String toString() {
-    return 'House(name: $name, location: $location, ownerName: $ownerName, imagePath: $imagePath, measurement: $measurement, pricePerNight: $pricePerNight, numOfBedrooms: $numOfBedrooms, numOfBathrooms: $numOfBathrooms, discountPrice: $discountPrice)';
+    return 'House(name: $name, location: $location, ownerName: $ownerName, imagePath: $imagePath, description: $description, measurement: $measurement, pricePerNight: $pricePerNight, numOfBedrooms: $numOfBedrooms, numOfBathrooms: $numOfBathrooms, discountPrice: $discountPrice)';
   }
 
   @override
@@ -86,6 +92,7 @@ class House {
         other.location == location &&
         other.ownerName == ownerName &&
         other.imagePath == imagePath &&
+        other.description == description &&
         other.measurement == measurement &&
         other.pricePerNight == pricePerNight &&
         other.numOfBedrooms == numOfBedrooms &&
@@ -99,6 +106,7 @@ class House {
         location.hashCode ^
         ownerName.hashCode ^
         imagePath.hashCode ^
+        description.hashCode ^
         measurement.hashCode ^
         pricePerNight.hashCode ^
         numOfBedrooms.hashCode ^

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:hotel_booking_ui/src/constants/constants_exports.dart';
 import 'package:hotel_booking_ui/src/utils/utils_exports.dart';
 
 import 'components/body.dart';
@@ -13,7 +12,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return const Scaffold(
-      backgroundColor: AppColors.scaffoldBgColor,
       bottomNavigationBar: CustomBottomNavBar(),
       body: HomeBody(),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:hotel_booking_ui/src/common/common_exports.dart';
 import 'package:hotel_booking_ui/src/constants/constants_exports.dart';
 import 'package:hotel_booking_ui/src/utils/utils_exports.dart';
 
@@ -28,7 +29,7 @@ class HousesListview extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         separatorBuilder: (_, __) => gapW4,
         itemBuilder: (_, index) => AnimatedListViewWidget(
-          child: HouseWidget(house: data[index]),
+          child: HouseWidget(house: data[index], index: index.toString()),
         ),
       ),
     );

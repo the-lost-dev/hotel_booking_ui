@@ -1,6 +1,12 @@
 class AppStrings {
   static const String register = 'Register';
-  static const String heroTag = 'Resort';
+  static const String details = 'Details';
+  static const String bathRoom = 'Bathroom';
+  static const String bedRoom = 'Bedroom';
+  static const String sqft = 'Sqft';
+  static const String share = 'Share';
+  static const String reserveNow = 'Reserve Now';
+  static const String price = 'Price';
   static const String login = 'Log In';
   static const String searchHere = 'Search here...';
   static const String home = 'Home';

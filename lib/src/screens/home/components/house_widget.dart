@@ -37,6 +37,7 @@ class HouseWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(AppSizes.twenty),
           ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 height: SizeConfig.blockSizeVertical * AppSizes.sixteen,

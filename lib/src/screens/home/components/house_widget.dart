@@ -5,6 +5,7 @@ import 'package:hotel_booking_ui/src/common/common_exports.dart';
 import 'package:hotel_booking_ui/src/constants/constants_exports.dart';
 import 'package:hotel_booking_ui/src/routing/app_router.dart';
 import 'package:hotel_booking_ui/src/utils/utils_exports.dart';
+import 'package:intl/intl.dart';
 
 import '../models/house.dart';
 
@@ -73,7 +74,8 @@ class HouseWidget extends StatelessWidget {
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: '\$${house.pricePerNight}',
+                            text: NumberFormat.simpleCurrency(locale: 'en-US')
+                                .format(house.pricePerNight),
                             style: Theme.of(context)
                                 .textTheme
                                 .displayMedium!

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import 'package:hotel_booking_ui/src/common/common_exports.dart';
 import 'package:hotel_booking_ui/src/constants/constants_exports.dart';
+import 'package:hotel_booking_ui/src/utils/utils_exports.dart';
 
 class HouseImageSection extends StatelessWidget {
   const HouseImageSection({
@@ -15,8 +17,10 @@ class HouseImageSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return SizedBox(
+      height: SizeConfig.blockSizeVertical * AppSizes.fortyEight,
       child: Hero(
+        
         tag: houseName,
         child: Container(
           padding: const EdgeInsets.all(AppSizes.twenty),
@@ -32,10 +36,13 @@ class HouseImageSection extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const ColoredContainer(
-                    child: Icon(
-                      Icons.arrow_back_outlined,
-                      size: AppSizes.thirty,
+                  GestureDetector(
+                    onTap: () => context.pop(),
+                    child: const ColoredContainer(
+                      child: Icon(
+                        Icons.arrow_back_outlined,
+                        size: AppSizes.thirty,
+                      ),
                     ),
                   ),
                   ColoredContainer(

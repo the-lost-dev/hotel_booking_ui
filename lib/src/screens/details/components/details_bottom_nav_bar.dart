@@ -62,16 +62,15 @@ class DetailsBottomNavBar extends StatelessWidget {
             child: SizedBox(
               height: double.infinity,
               child: FilledButton(
-                style: FilledButton.styleFrom(
-                  textStyle: Theme.of(context).textTheme.labelLarge,
-                  backgroundColor: AppColors.black,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(AppSizes.sixteen),
+                  style: FilledButton.styleFrom(
+                    textStyle: Theme.of(context).textTheme.labelLarge,
+                    backgroundColor: AppColors.black,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(AppSizes.sixteen),
+                    ),
                   ),
-                ),
-                child: const Text(AppStrings.reserveNow),
-                onPressed: () => null,
-              ),
+                  child: const Text(AppStrings.reserveNow),
+                  onPressed: () => debugPrint('Reserved')),
             ),
           ),
         ],

@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:hotel_booking_ui/src/constants/constants_exports.dart';
 import 'package:hotel_booking_ui/src/utils/utils_exports.dart';
+import 'package:intl/intl.dart';
 
 import '../models/house.dart';
 
@@ -68,11 +69,13 @@ class FeaturedListingWidget extends StatelessWidget {
                         text: TextSpan(
                           children: [
                             TextSpan(
-                              text: '\$${featuredHouse.discountPrice}',
+                              text: NumberFormat.simpleCurrency(locale: 'en-US')
+                                  .format(featuredHouse.discountPrice),
                               style: Theme.of(context)
                                   .textTheme
                                   .displayMedium!
                                   .copyWith(
+                                    fontSize: AppSizes.eighteen,
                                     color: AppColors.brown,
                                   ),
                             ),
@@ -82,6 +85,7 @@ class FeaturedListingWidget extends StatelessWidget {
                                   .textTheme
                                   .displaySmall!
                                   .copyWith(
+                                    fontSize: AppSizes.eighteen,
                                     color: AppColors.grey500,
                                   ),
                             ),
@@ -89,10 +93,12 @@ class FeaturedListingWidget extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '\$${featuredHouse.pricePerNight}',
+                        NumberFormat.simpleCurrency(locale: 'en-US')
+                            .format(featuredHouse.pricePerNight),
                         style:
                             Theme.of(context).textTheme.displayMedium!.copyWith(
                                   decoration: TextDecoration.lineThrough,
+                                  fontSize: AppSizes.eighteen,
                                   color: AppColors.grey500,
                                 ),
                       ),

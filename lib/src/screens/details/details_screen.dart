@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../home/models/house.dart';
@@ -20,22 +19,25 @@ class HouseDetailsScreen extends StatelessWidget {
       bottomNavigationBar: DetailsBottomNavBar(
         pricePerNight: house.pricePerNight,
       ),
-      body: Column(
-        children: [
-          HouseImageSection(
-            houseName: house.name,
-            imagePath: house.imagePath,
-          ),
-          HouseDetailsSection(
-            houseName: house.name,
-            numOfBedRooms: house.numOfBedrooms,
-            numOfBathRooms: house.numOfBathrooms,
-            houseLocation: house.location,
-            houseOwnerName: house.ownerName,
-            houseMeasurement: house.measurement,
-            houseDescription: house.description,
-          ),
-        ],
+      body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Column(
+          children: [
+            HouseImageSection(
+              houseName: house.name,
+              imagePath: house.imagePath,
+            ),
+            HouseDetailsSection(
+              houseName: house.name,
+              numOfBedRooms: house.numOfBedrooms,
+              numOfBathRooms: house.numOfBathrooms,
+              houseLocation: house.location,
+              houseOwnerName: house.ownerName,
+              houseMeasurement: house.measurement,
+              houseDescription: house.description,
+            ),
+          ],
+        ),
       ),
     );
   }

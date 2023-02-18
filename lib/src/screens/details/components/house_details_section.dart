@@ -26,84 +26,82 @@ class HouseDetailsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        padding: const EdgeInsets.all(AppSizes.twenty),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
+    return Container(
+      padding: const EdgeInsets.all(AppSizes.twenty),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Text(
+                  houseName,
+                  style: Theme.of(context).textTheme.displayLarge,
+                ),
+              ),
+              const ColoredContainer(
+                child: IconTextWidget(
+                  iconColor: AppColors.black,
+                  icon: Icons.share_outlined,
+                  title: AppStrings.share,
+                ),
+              ),
+            ],
+          ),
+          gapH2,
+          IconTextWidget(
+            isSVG: true,
+            svgIcon: AppIcons.locationIcon,
+            iconColor: AppColors.grey500,
+            title: houseLocation,
+          ),
+          gapH2,
+          IconTextWidget(
+            isAuxillary: true,
+            icon: Icons.person_rounded,
+            iconColor: AppColors.grey500,
+            title: houseOwnerName,
+          ),
+          gapH2,
+          ColoredContainer(
+            color: AppColors.brown.withOpacity(.1),
+            borderRadius: AppSizes.fourteen,
+            padding: AppSizes.twenty,
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Expanded(
-                  child: Text(
-                    houseName,
-                    style: Theme.of(context).textTheme.displayLarge,
-                  ),
+                IconTextWidget(
+                  fontSize: AppSizes.fourteen,
+                  iconColor: AppColors.brown,
+                  icon: Icons.bed_outlined,
+                  title: '$numOfBedRooms ${AppStrings.bedRoom}',
                 ),
-                const ColoredContainer(
-                  child: IconTextWidget(
-                    iconColor: AppColors.black,
-                    icon: Icons.share_outlined,
-                    title: AppStrings.share,
-                  ),
+                IconTextWidget(
+                  fontSize: AppSizes.fourteen,
+                  iconColor: AppColors.brown,
+                  icon: Icons.bathtub_outlined,
+                  title: '$numOfBathRooms ${AppStrings.bathRoom}',
+                ),
+                IconTextWidget(
+                  fontSize: AppSizes.fourteen,
+                  iconColor: AppColors.brown,
+                  icon: Icons.layers_rounded,
+                  title: '$houseMeasurement ${AppStrings.sqft}',
                 ),
               ],
             ),
-            gapH2,
-            IconTextWidget(
-              isSVG: true,
-              svgIcon: AppIcons.locationIcon,
-              iconColor: AppColors.grey500,
-              title: houseLocation,
-            ),
-            gapH2,
-            IconTextWidget(
-              isAuxillary: true,
-              icon: Icons.person_rounded,
-              iconColor: AppColors.grey500,
-              title: houseOwnerName,
-            ),
-            gapH2,
-            ColoredContainer(
-              color: AppColors.brown.withOpacity(.1),
-              borderRadius: AppSizes.fourteen,
-              padding: AppSizes.twenty,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  IconTextWidget(
-                    fontSize: AppSizes.fourteen,
-                    iconColor: AppColors.brown,
-                    icon: Icons.bed_outlined,
-                    title: '$numOfBedRooms ${AppStrings.bedRoom}',
-                  ),
-                  IconTextWidget(
-                    fontSize: AppSizes.fourteen,
-                    iconColor: AppColors.brown,
-                    icon: Icons.bathtub_outlined,
-                    title: '$numOfBathRooms ${AppStrings.bathRoom}',
-                  ),
-                  IconTextWidget(
-                    fontSize: AppSizes.fourteen,
-                    iconColor: AppColors.brown,
-                    icon: Icons.layers_rounded,
-                    title: '$houseMeasurement ${AppStrings.sqft}',
-                  ),
-                ],
-              ),
-            ),
-            gapH2,
-            Expanded(
-              child: Text(
-                houseDescription,
-                style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                      color: AppColors.black,
-                    ),
-              ),
-            ),
-          ],
-        ),
+          ),
+          gapH2,
+          Text(
+            houseDescription,
+            textAlign: TextAlign.justify,
+            style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                  wordSpacing: 1,
+                  color: AppColors.black,
+                ),
+          ),
+        ],
       ),
     );
   }
